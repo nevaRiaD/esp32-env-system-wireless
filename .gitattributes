@@ -1,0 +1,29 @@
+# Normalize line endings so files don't churn when switching Windows <-> Linux.
+# Canonical form in the repo is LF; Git converts as needed on checkout.
+* text=auto eol=lf
+
+# Scripts that must stay LF regardless of platform
+*.sh    text eol=lf
+*.py    text eol=lf
+*.c     text eol=lf
+*.h     text eol=lf
+*.cpp   text eol=lf
+*.hpp   text eol=lf
+*.cmake text eol=lf
+CMakeLists.txt text eol=lf
+*.csv   text eol=lf
+*.md    text eol=lf
+
+# Windows-only scripts keep CRLF
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+# Binary / firmware artifacts — never touch line endings
+*.bin   binary
+*.elf   binary
+*.map   binary
+*.a     binary
+*.o     binary
+*.png   binary
+*.jpg   binary
+*.ico   binary

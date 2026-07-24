@@ -1,0 +1,17 @@
+# Project build defaults — applied on a fresh checkout (sdkconfig itself is gitignored).
+# Keeps the build reproducible across machines (Windows <-> Linux) and IDF 6.0.2.
+# Regenerate sdkconfig from these with: idf.py reconfigure
+
+# Target chip (a fresh clone defaults to plain esp32 without this)
+CONFIG_IDF_TARGET="esp32c6"
+
+# Flash
+CONFIG_ESPTOOLPY_FLASHSIZE="2MB"
+
+# Build type / debug
+CONFIG_COMPILER_OPTIMIZATION_DEBUG=y
+CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_ENABLE=y
+CONFIG_COMPILER_OPTIMIZATION_ASSERTION_LEVEL=2
+
+# Main task
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=3584

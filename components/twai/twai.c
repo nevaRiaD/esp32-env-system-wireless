@@ -14,6 +14,15 @@ static const char *TAG = "TWAI";
 
 // STATIC FUNCTION PROTOTYPES
 
+/**
+ * @brief Event handler that activates from twai rx_msg from ISR
+ * 
+ * @param handle   : 
+ * @param edata    : 
+ * @param user_ctx : 
+ * @return true  : Message successfully received and sent to Raspberry Pi
+ * @return false : Message did not successfully receive
+ */
 static bool twai_rx_cb(twai_node_handle_t handle, const twai_rx_done_event_data_t *edata, void *user_ctx);
 
 
@@ -96,15 +105,6 @@ esp_err_t twai_send(twai_node_handle_t *node_hdl, const twai_frame_t *tx_msg)
 
 // STATIC FUNCTION DEFINITIONS
 
-/**
- * @brief Event handler that activates from twai rx_msg from ISR
- * 
- * @param handle   : 
- * @param edata    : 
- * @param user_ctx : 
- * @return true  : Message successfully received and sent to Raspberry Pi
- * @return false : Message did not successfully receive
- */
 static bool twai_rx_cb(twai_node_handle_t handle, const twai_rx_done_event_data_t *edata, void *user_ctx)
 {
 	// Return if pointers are NULL

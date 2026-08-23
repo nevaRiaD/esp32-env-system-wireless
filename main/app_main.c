@@ -17,24 +17,24 @@ static const char *TAG = "APP_MAIN";
 
 void app_main(void)
 {
-  ESP_LOGI(TAG, "app_main: started.");
+  ESP_LOGI(TAG, "started.");
 
   // TWAI INITIALIZATION
-  ESP_LOGI(TAG, "app_main: twai initialization started.");
+  ESP_LOGI(TAG, "twai initialization started.");
   twai_node_handle_t twai_hdl;
   twai_onchip_node_config_t twai_cfg;
   esp_err_t status = twai_init(&twai_hdl, &twai_cfg);
   if (status != ESP_OK) {
-    ESP_LOGE(TAG, "app_main: twai initialization was unsuccessful.");
-    ESP_LOGI(TAG, "app_main: ending program.");
+    ESP_LOGE(TAG, "twai initialization was unsuccessful.");
+    ESP_LOGI(TAG, "ending program.");
     return;
   }
-  ESP_LOGI(TAG, "app_main: twai initialization complete.");
+  ESP_LOGI(TAG, "twai initialization complete.");
 
   // WIFI INITIALIZATION
-  ESP_LOGI(TAG, "app_main: wifi initialization started.");
+  ESP_LOGI(TAG, "wifi initialization started.");
   // TODO: Add wifi initialization here
-  ESP_LOGI(TAG, "app_main: wifi initialization complete.");
+  ESP_LOGI(TAG, "wifi initialization complete.");
 
   while(true) {
     // TODO: Insert sequential loop for now.

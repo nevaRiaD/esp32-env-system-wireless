@@ -1,3 +1,11 @@
+/**
+ * @file twai.h
+ * @author Jaycee Alipio (jaycee.alipio@gmail.com)
+ * @brief TWAI/CAN communication protocol init/send functions
+ * @date 2026-08-23
+ * 
+ */
+
 #ifndef TWAI_H
 #define TWAI_H
 

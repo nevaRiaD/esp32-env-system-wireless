@@ -1,3 +1,11 @@
+/**
+ * @file env_evt_enums.h
+ * @author Jaycee Alipio (jaycee.alipio@gmail.com)
+ * @brief Enums shared between STM32 and ESP32 for CAN ID events
+ * @date 2026-08-23
+ * 
+ */
+
 #ifndef ENV_EVT_ENUMS_H
 #define ENV_EVT_ENUMS_H
 

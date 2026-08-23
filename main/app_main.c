@@ -1,7 +1,9 @@
-/*
- * SPDX-FileCopyrightText: 2010-2022 Espressif Systems (Shanghai) CO LTD
+/**
+ * @file app_main.c
+ * @author Jaycee Alipio (jaycee.alipio@gmail.com)
+ * @brief Sends/receives messages wirelessly from Raspberry Pi to send to STM32
+ * @date 2026-08-23
  *
- * SPDX-License-Identifier: CC0-1.0
  */
 
 #include "esp_err.h"

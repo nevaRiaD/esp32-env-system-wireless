@@ -3,7 +3,6 @@
 
 #include "esp_err.h"
 #include "esp_twai_onchip.h"
-#include "esp_twai.h"
 
 /**
  * @brief Initializes twai value handles

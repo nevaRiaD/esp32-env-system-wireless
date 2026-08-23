@@ -4,21 +4,16 @@
  * SPDX-License-Identifier: CC0-1.0
  */
 
-#include <stdio.h>
-#include <inttypes.h>
 #include "esp_err.h"
 #include "esp_log.h"
 #include "esp_twai_types.h"
 #include "sdkconfig.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "esp_chip_info.h"
-#include "esp_flash.h"
-#include "esp_system.h"
 
 #include "twai.h"
 
-static const char *TAG = "MAIN";
+static const char *TAG = "APP_MAIN";
 
 void app_main(void)
 {

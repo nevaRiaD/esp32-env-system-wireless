@@ -3,6 +3,7 @@
 #include "esp_err.h"
 #include "esp_log.h"
 #include "esp_log_args.h"
+#include "esp_twai.h"
 #include "esp_twai_types.h"
 #include "env_evt_enums.h"
 #include <stdint.h>
@@ -25,10 +26,10 @@ esp_err_t twai_init(twai_node_handle_t *node_hdl, twai_onchip_node_config_t *nod
 	}
 
 	// Twai node config setup
-	node_cfg->io_cfg.tx = 4;	// TWAI TX GPIO PIN
-	node_cfg->io_cfg.rx = 5;	// TWAI RX GPIO PIN
+	node_cfg->io_cfg.tx = 4;							 // TWAI TX GPIO PIN
+	node_cfg->io_cfg.rx = 5;							 // TWAI RX GPIO PIN
 	node_cfg->bit_timing.bitrate = 500000; // 500 kbps bitrate
-	node_cfg->tx_queue_depth = 5; // Transmit queue depth set to 5
+	node_cfg->tx_queue_depth = 5; 				 // Transmit queue depth set to 5
 
 #ifdef TWAI_LOOPBACK_ENABLED
 	// Node will receive own transmitted msgs if enabled

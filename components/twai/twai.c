@@ -28,6 +28,7 @@ static bool twai_rx_cb(twai_node_handle_t handle, const twai_rx_done_event_data_
 
 esp_err_t twai_init(twai_node_handle_t *node_hdl, twai_onchip_node_config_t *node_cfg)
 {
+	ESP_LOGI(TAG, "twai_iit: Started");
 	// Checks if pointers are NULL
 	if (!node_hdl || !node_cfg) {
 		ESP_LOGE(TAG, "twai_init: Parameter pointer arguments are NULL.");
@@ -136,7 +137,7 @@ static bool twai_rx_cb(twai_node_handle_t handle, const twai_rx_done_event_data_
 	}
 
 	// Send rx_msg from STM32 wirelessly to Raspberry Pi
-	// TODO: Implement WIFI
+	// TODO: Implement WIFI function to send rx_msg
 
 	ESP_LOGI(TAG, "twai_rx_cb: Successfully received TWAI msg and sent to Raspberry Pi wirelessly.");
 	return true;
